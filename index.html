@@ -6,92 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fair Money</title>
     <link rel="shortcut icon" href="#" />
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
 
-    <script defer src="./bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- <style>
-      section
-      {
-        padding: 120px 0;
-      }
-    </style> -->
+    <script
+      defer
+      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
   </head>
   <body>
-    <!-- <h1>hello world</h1> -->
-
-    <!-- navbar shyla image, text, sign in button, sign up button
-    <nav class="navbar navbar-light bg-secondary py-3 ps-5">
-      <div class="d-flex">
-        <a href="#intro" class="navbar-brand mr-auto p-2">
-          <img src="icons8-tax-96.png" alt="Fair Money logo Hehe"  width="60" height="48" class="d-inline-block align-text-center m-1">
-          Fair Money
-        </a>
-        <div class="p-2">
-          <a href="" class="btn btn-secondary">sign in</a>
-        </div>
-        <div class="p-2">
-          <a href="" class="btn btn-primary">sign up</a>
-        </div>
-      </div>
-    </nav> -->
-
-    <!-- navbar shyla image, text, sign in button, sign up button
-    <nav class="navbar navbar-light bg-secondary py-3 ps-5">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <a href="#intro" class="navbar-brand">
-              <img src="icons8-tax-96.png" alt="Fair Money logo Hehe"  width="60" height="48" class="d-inline-block align-text-center m-1">
-              Fair Money
-            </a>
-          </div>
-          <div class="col">
-            <a href="" class="btn btn-secondary">sign in</a>
-          </div>
-          <div class="col">
-            <a href="" class="btn btn-primary">sign up</a>
-          </div>
-        </div>
-      </div>
-    </nav> -->
-
-    <!-- <nav class="navbar navbar-light bg-secondary py-3 ps-5">
-      <div class="row justify-content-center align-items-center"></div>
-        <div class="container">
-          <a href="#intro" class="navbar-brand">
-            <img src="icons8-tax-96.png" alt="Fair Money logo Hehe"  width="60" height="48" class="d-inline-block align-text-center m-1">
-            Fair Money
-          </a>
-        </div>
-        <div class="">
-          <a href="" class="btn btn-primary">sign 1</a>
-          <a href="" class="btn btn-danger">sign 2</a>
-        </div>
-      </div>
-    </nav> -->
-
     <!-- navbar shyla image, text, sign in button, sign up button-->
 
-    <nav class="navbar navbar-light bg-secondary py-3 ps-5">
+    <nav class="navbar navbar-light bg-secondary">
       <div class="container">
         <a href="" class="navbar-brand">
           <img
-            src="icons8-tax-96.png"
-            alt="Fair Money logo Hehe"
-            width="60"
-            height="48"
-            class="d-inline-block align-text-top m-1"
+            src="./images/icons8-tax-96.png"
+            alt="Fair Money logo"
+            width="80"
           />
-          Fair Money
         </a>
-        <div class="pe-2">
-          <!-- m-3 p-3 rounded-pill border border-5 border-warning bg-success -->
+        <div class="ms-n3 me-auto display-6">Fair Money</div>
+        <div class="align-self-end mb-3">
           <a
-            href="#signIn"
+            href="./signIn.html"
             class="btn btn-secondary btn-outline-dark rounded-pill py-2 px-4 mx-3"
             >Sign In</a
           >
-          <a href="#signUp" class="btn btn-primary rounded-pill py-2 px-4 mx-1"
+          <a href="./signUp.html" class="btn btn-primary rounded-pill py-2 px-4"
             >Sign Up</a
           >
         </div>
@@ -99,22 +40,31 @@
     </nav>
 
     <!-- elbody el flnos fe klam w fe soora -->
-    <section id="#intro">
-      <div class="container-lg pt-5">
-        <div class="row justify-content-center align-item-center">
+    <section id="intro">
+      <div class="container-lg mt-5">
+        <div class="row justify-content-center align-items-center">
           <div class="col-md-5 text-center text-md-start">
-            <h1>
-              <div class="display-2 fw-bold">
-                Less Stress When Sharing Expenses
+            <h1 class="display-5 fw-bold">
+              <div class="">Less Stress When Sharing Expenses</div>
+              <div class="text-primary">
+                With Anyone
+                <img
+                  src="./images/tick.png"
+                  alt="tick"
+                  height="40"
+                  class="d-inline me-3 mb-2"
+                />
               </div>
-              <div class="display-2 text-primary fw-bold">With Anyone</div>
-              <img src="tick.png" alt="tick" height="66" width="66" class=""/>
             </h1>
+            <div class="lead mt-3">
+              Keep track of your shared expenses and balances with housemates,
+              trips, groups, friends, and family.
+            </div>
           </div>
 
-          <div class="col-md-5 text-center d-none d-md-block">
+          <div class="col-md-5 d-none d-md-block">
             <img
-              src="undraw_calculator_re_alsc.svg"
+              src="./images/undraw_calculator_re_alsc.svg"
               alt="Person Using Calculator Hehe"
               class="img-fluid"
             />
@@ -125,7 +75,7 @@
 
     <!-- El Cards -->
 
-    <section  class="p-5 bg-danger col-sm my-5">
+    <section class="p-5 bg-danger col-sm my-5">
       <div class="container">
         <div class="container-fluid">
           <div class="row text-center">
@@ -133,31 +83,32 @@
             <div class="col-md">
               <div class="card border-secondary text-dark bg-secondary">
                 <div class="card-body text-center">
-                  <img src="graph analytics.svg" alt="Graph Analytics Hehe">
+                  <img
+                    src="./images/graph analytics.svg"
+                    alt="Graph Analytics Hehe"
+                  />
                 </div>
                 <div>
-                  <h3 class="card-title mb-3 fw-bold">
-                    Track Balances
-                  </h3>
+                  <h3 class="card-title mb-3 fw-bold">Track Balances</h3>
                   <p class="card-text">
                     Keep Track of Shared Expenses, Balances, and Who Owes Who.
                   </p>
-
                 </div>
-               
               </div>
             </div>
             <!-- BOX 2 -->
             <div class="col-md">
               <div class="card border-secondary text-dark bg-secondary">
                 <div class="card-body text-center">
-                  <img src="graph analytics.svg" alt="Graph Analytics Hehe">
+                  <img
+                    src="./images/graph analytics.svg"
+                    alt="Graph Analytics Hehe"
+                  />
                 </div>
-                <h3 class="card-title mb-3 fw-bold">
-                  Organize Expenses
-                </h3>
+                <h3 class="card-title mb-3 fw-bold">Organize Expenses</h3>
                 <p class="card-text">
-                  Split Expenses with Any Group: Trips, Housemates, Friends, and Family.
+                  Split Expenses with Any Group: Trips, Housemates, Friends, and
+                  Family.
                 </p>
               </div>
             </div>
@@ -165,11 +116,12 @@
             <div class="col-md">
               <div class="card border-secondary text-dark bg-secondary">
                 <div class="card-body text-center">
-                  <img src="graph analytics.svg" alt="Graph Analytics Hehe">
+                  <img
+                    src="./images/graph analytics.svg"
+                    alt="Graph Analytics Hehe"
+                  />
                 </div>
-                <h3 class="card-title mb-3 fw-bold">
-                  Add Expenses Easily
-                </h3>
+                <h3 class="card-title mb-3 fw-bold">Add Expenses Easily</h3>
                 <p class="card-text">
                   Quickly Add Expenses On The Go Before You Forget Who Paid.
                 </p>
@@ -178,52 +130,51 @@
             <div class="col-md">
               <div class="card border-secondary text-dark bg-secondary">
                 <div class="card-body text-center">
-                  <img src="graph analytics.svg" alt="Graph Analytics Hehe">
+                  <img
+                    src="./images/graph analytics.svg"
+                    alt="Graph Analytics Hehe"
+                  />
                 </div>
-                  <h3 class="card-title mb-3 fw-bold">
-                    Pay Friends Back
-                  </h3>
+                <h3 class="card-title mb-3 fw-bold">Pay Friends Back</h3>
                 <p class="card-text">
                   Settle Up with a Friend and Record Any Cash or Online Payment.
                 </p>
               </div>
             </div>
-      
           </div>
         </div>
       </div>
     </section>
 
-
-        <!-- elbody el t7t fe soora w fe klam -->
-        <section id="#intro">
-          <div class="container-lg pt-5 pb-5 mb-4">
-            <div class="row justify-content-center align-item-center">
-              
-    
-              <div class="col-md-5 text-center d-none d-md-block me-5">
-                <img
-                  src="undraw_wallet_re_cx9u.svg"
-                  alt="Person Using Calculator Hehe"
-                  class="img-fluid"
-                  height="290"
-                  width="220"/>
-              </div>
-              <div class="col-md-5 text-center text-md-start my-3 ms-3">
-                <div>
-                  <h2 class="fw-bold">
-                    Makes It Easy to
-                  </h2>
-                  <h2 class=" text-primary fw-bold">Split Bills</h2>
-                  <h2 class="fw-bold">
-                  We Organize All Your Shared Expenses in One Place, so that Everyone Can See Who They Owe. Whether You are Sharing a Ski Vacation, Splitting Rent with Roomates, or Paying Someone Back for Lunch, Fair Money Makes Life Easier.
-                  </h2>
-                </div>
-              </div>
+    <!-- elbody el t7t fe soora w fe klam -->
+    <section id="last">
+      <div class="container-lg mb-4">
+        <div class="row justify-content-evenly align-items-center">
+          <div class="col-md-4 d-none d-md-block">
+            <img
+              src="./images/undraw_wallet_re_cx9u.svg"
+              alt="Person Using Calculator"
+              class="img-fluid"
+              width="235"
+            />
+          </div>
+          <div class="col-md-5 text-center text-md-start">
+            <div>
+              <h2 class="fw-bold">
+                Makes It Easy to
+                <div class="d-inline text-primary">Split Bills</div>
+                With Friends And Family.
+              </h2>
+              <h1 class="lead fs-5 mt-3">
+                We Organize All Your Shared Expenses in One Place, so that
+                Everyone Can See Who They Owe. Whether You are Sharing a Ski
+                Vacation, Splitting Rent with Roomates, or Paying Someone Back
+                for Lunch, Fair Money Makes Life Easier.
+              </h1>
             </div>
           </div>
-        </section>
-
-
+        </div>
+      </div>
+    </section>
   </body>
 </html>
