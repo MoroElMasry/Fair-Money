@@ -10,8 +10,7 @@
     <script
       defer
       src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-    >
-    </script>
+    ></script>
   </head>
   <body>
     <nav class="navbar navbar-light bg-secondary shadow">
@@ -32,9 +31,12 @@
             class="btn btn-secondary btn-outline-dark rounded-pill py-2 px-4 mx-3"
             >Sign In</a
           >
-          <a href="./signUp.html" class="btn btn-primary rounded-pill py-2 px-4"
-            >Sign Up</a
+          <a
+            href="./signUp.html"
+            class="btn btn-primary rounded-pill py-2 px-4"
           >
+            Sign Up
+          </a>
         </div>
       </div>
     </nav>
@@ -47,70 +49,109 @@
         background-size: cover;
       "
     >
-    <section class="container-lg h-100">
+      <section class="container-lg h-100">
         <div class="row justify-content-evenly align-items-center h-100">
-            <div class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5 d-none d-md-block my-5 container">
-                            <div class="container">
-                                <div class="d-inline fw-semibold text-bg-primary">
-                                    Register Now
-                                </div>
-                                <span>&#10024;</span>
-                                <div class="fw-semibold text-dark">
-                                    & Start Sharing Expenses
-                                </div>
-                                <img
-                                src="./images/undraw_join_re_w1lh.svg"
-                                alt="Person Using Calculator"
-                                class="img-fluid mt-1"
-                                />
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-5 text-center text-md-start ps-0 mx-4">
-                            
-                            <h3 class="fw-bold">
-                                Get Started
-                            </h3>
-                            <h6>
-                                already have an account
-                                <a href="./signIn.html" class="text-danger fw-semibold">sign in</a>
-                            </h6>
-                            <form action="" onsubmit="validate()" class="">
-                                <!-- <div>
-                                    <p>Name: <input type="text" id="name" class="rounded-3 p-1"></p>
-                                </div> -->
-                                <div class="mb-3">
-                                    <label class="form-label" for="name">Name</label>
-                                    <input class="form-control shadow" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="emailAddress">Email Address</label>
-                                    <input class="form-control shadow" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="password">Password</label>
-                                    <input class="form-control shadow" id="password" type="text" placeholder="Password" data-sb-validations="required" />
-                                    <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
-                                </div>
-                                <div class="d-grid">
-                                    <button class="btn btn-primary shadow btn-lg mt-3" id="submitButton" type="submit">Submit</button>
-                                </div>
-                                <!-- <p>Email: <input type="text" id="mail" class="rounded-3 p-1" placeholder= "Email Address"></p>
-                                <p>Password: <input type="password" id="pass" class="rounded-3 p-1" placeholder="Password"></p>
-                                <p><input type="submit" value="Register" class="rounded-4 bg-primary shadow-sm px-5 ms-3"></p> -->
-                            </form>
-                        </div>
+          <div
+            class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-md-5 d-none d-md-block my-5 container">
+                  <div class="container">
+                    <div class="d-inline fw-semibold text-bg-primary">
+                      Register Now
                     </div>
+                    <span>&#10024;</span>
+                    <div class="fw-semibold text-dark">
+                      & Start Sharing Expenses
+                    </div>
+                    <img
+                      src="./images/undraw_join_re_w1lh.svg"
+                      alt="Person Using Calculator"
+                      class="img-fluid mt-1"
+                    />
+                  </div>
                 </div>
+
+                <div class="col-md-5 text-center text-md-start ps-0 mx-4">
+                  <h3 class="fw-bold">Get Started</h3>
+                  <h6>
+                    already have an account
+                    <a href="./signIn.html" class="text-danger fw-semibold"
+                      >sign in</a
+                    >
+                  </h6>
+                  <form action="" onsubmit="validate()" class="">
+                    <div class="mb-3">
+                      <label class="form-label" for="name">Name</label>
+                      <input
+                        class="form-control shadow"
+                        id="name"
+                        type="text"
+                        placeholder="Name"
+                        data-sb-validations="required"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="emailAddress"
+                        >Email Address</label
+                      >
+                      <input
+                        class="form-control shadow"
+                        id="emailAddress"
+                        type="email"
+                        placeholder="Email Address"
+                        data-sb-validations="required,email"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="password">Password</label>
+                      <input
+                        class="form-control shadow"
+                        id="password"
+                        type="password"
+                        placeholder="Password"
+                        data-sb-validations="required"
+                      />
+                    </div>
+                    <div class="d-grid">
+                      <button
+                        class="btn btn-primary shadow btn-lg mt-3"
+                        id="submitButton"
+                        type="submit"
+                      >
+                        Register
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
     </div>
+    <script type="text/javascript">
+      function validate() {
+        var n = document.getElementById("name").value;
+        var nREGEX = /^[a-zA-Z\s]{3,}$/;
+        if (nREGEX.test(n) == false) {
+          alert("Please enter a valid name");
+          return false;
+        }
+        var p = document.getElementById("pass").value;
+        var pRegex = /^([a-zA-Z$_0-9]){8,32}$/;
+        if (pRegex.test(p) == false) {
+          alert("please da5l el password  sa7");
+          return false;
+        }
+        var m = document.getElementById("mail").value;
+        var mREGEX = /^[a-zA-Z0-9_\.]{2,}@[a-zA-Z]+.[a-zA-Z]+$/;
+        if (mREGEX.test(m) == false) {
+          alert("Please re-enetr e-mail");
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
