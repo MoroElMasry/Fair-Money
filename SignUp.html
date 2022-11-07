@@ -52,7 +52,7 @@
             <div class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5 d-none d-md-block">
+                        <div class="col-md-5 d-none d-md-block my-5 container">
                             <div class="container">
                                 <div class="d-inline fw-semibold text-bg-primary">
                                     Register Now
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         
-                        <div class="col-md-5 text-center text-md-start ps-0 m-1">
+                        <div class="col-md-5 text-center text-md-start ps-0 mx-4">
                             
                             <h3 class="fw-bold">
                                 Get Started
@@ -82,21 +82,24 @@
                                 <!-- <div>
                                     <p>Name: <input type="text" id="name" class="rounded-3 p-1"></p>
                                 </div> -->
-                                <div>
+                                <div class="mb-3">
                                     <label class="form-label" for="name">Name</label>
-                                    <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                                    <input class="form-control shadow" id="name" type="text" placeholder="Name" data-sb-validations="required" />
                                     <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                 </div>
-                                <div>
+                                <div class="mb-3">
                                     <label class="form-label" for="emailAddress">Email Address</label>
-                                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                    <input class="form-control shadow" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
                                     <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
                                     <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                                 </div>
-                                <div>
+                                <div class="mb-3">
                                     <label class="form-label" for="password">Password</label>
-                                    <input class="form-control" id="password" type="text" placeholder="Password" data-sb-validations="required" />
+                                    <input class="form-control shadow" id="password" type="text" placeholder="Password" data-sb-validations="required" />
                                     <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary shadow btn-lg mt-3" id="submitButton" type="submit">Submit</button>
                                 </div>
                                 <!-- <p>Email: <input type="text" id="mail" class="rounded-3 p-1" placeholder= "Email Address"></p>
                                 <p>Password: <input type="password" id="pass" class="rounded-3 p-1" placeholder="Password"></p>
