@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <script
@@ -47,13 +47,49 @@
         background-size: cover;
       "
     >
-      <section class="container-lg h-100">
+    <section class="container-lg h-100">
         <div class="row justify-content-evenly align-items-center h-100">
-          <div class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4">
-            
-          </div>
+            <div class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 d-none d-md-block">
+                            <div class="container">
+                                <div class="d-inline fw-semibold text-bg-primary">
+                                    Register Now
+                                </div>
+                                <span>&#10024;</span>
+                                <div class="fw-semibold text-dark">
+                                    & Start Sharing Expences
+                                </div>
+                                <img
+                                src="./images/undraw_join_re_w1lh.svg"
+                                alt="Person Using Calculator"
+                                class="img-fluid mt-1"
+                                />
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-5 text-center text-md-start ps-0 ms-md-5">
+                            
+                            <h3 class="fw-bold">
+                                Get Started
+                            </h3>
+                            <h6>
+                                already have an account
+                                <a href="./signIn.html" class="text-danger fw-semibold">sign in</a>
+                            </h6>
+                            <form action="" onsubmit="validate()" class="container">
+                                <p>Name: <input type="text" id="name" class="rounded-3"></p>
+                                <p>Email: <input type="text" id="mail" class="rounded-3"></p>
+                                <p>Password: <input type="password" id="pass" class="rounded-3"></p>
+                                <p><input type="submit" value="Register" class="rounded-4 bg-primary shadow-sm px-5 ms-3"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
     </div>
   </body>
 </html>
