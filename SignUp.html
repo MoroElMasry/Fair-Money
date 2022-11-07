@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <script
+      defer
+      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-secondary shadow">
+      <div class="container">
+        <a href="./index.html" class="navbar-brand">
+          <img
+            src="./images/icons8-tax-96.png"
+            alt="Fair Money logo"
+            width="80"
+          />
+        </a>
+        <div class="ms-n3 me-auto display-6">Fair Money</div>
+        <div class="align-self-end mb-3">
+          <a
+            href="./signIn.html"
+            class="btn btn-secondary btn-outline-dark rounded-pill py-2 px-4 mx-3"
+            >Sign In</a
+          >
+          <a
+            href="./signUp.html"
+            class="btn btn-primary rounded-pill py-2 px-4"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="bg-image"
+      style="
+        background-image: url('./images/sign background.svg');
+        height: 89vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <section class="container-lg h-100">
+        <div class="row justify-content-evenly align-items-center h-100">
+          <div
+            class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-md-5 d-none d-md-block my-5 container">
+                  <div class="container">
+                    <div class="d-inline fw-semibold text-bg-primary">
+                      Register Now
+                    </div>
+                    <span>&#10024;</span>
+                    <div class="fw-semibold text-dark">
+                      & Start Sharing Expenses
+                    </div>
+                    <img
+                      src="./images/undraw_join_re_w1lh.svg"
+                      alt="Person Using Calculator"
+                      class="img-fluid mt-1"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-5 text-center text-md-start ps-0 mx-4">
+                  <h3 class="fw-bold">Get Started</h3>
+                  <h6>
+                    already have an account
+                    <a href="./signIn.html" class="text-danger fw-semibold">sign in</a>
+                  </h6>
+                  <form action="" onsubmit="validate()" class="">
+                    <div class="mb-3">
+                      <label class="form-label" for="name">Name</label>
+                      <input
+                        class="form-control shadow"
+                        id="name"
+                        type="text"
+                        placeholder="Name"
+                        data-sb-validations="required"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="emailAddress">Email Address</label>
+                      <input
+                        class="form-control shadow"
+                        id="mail"
+                        type="email"
+                        placeholder="Email Address"
+                        data-sb-validations="required,email"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="password">Password</label>
+                      <input
+                        class="form-control shadow"
+                        id="pass"
+                        type="password"
+                        placeholder="••••••••••••••••"
+                        data-sb-validations="required"
+                      />
+                    </div>
+                    <div class="d-grid">
+                      <button
+                        class="btn btn-primary shadow btn-lg mt-3"
+                        id="submitButton"
+                        type="submit">
+                        Register
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript">
+      function validate() {
+        var n = document.getElementById("name").value;
+        var nREGEX = /^[a-zA-Z\s]{3,}$/;
+        if (nREGEX.test(n) == false) {
+          alert("Please enter a valid name");
+          return false;
+        }
+        var m = document.getElementById("mail").value;
+        var mREGEX = /^[a-zA-Z0-9_\.]{2,}@[a-zA-Z]+.[a-zA-Z]+$/;
+        if (mREGEX.test(m) == false) {
+          alert("Please re-enetr e-mail");
+          return false;
+        }
+        var p = document.getElementById("pass").value;
+        var pRegex = /^([a-zA-Z$_0-9]){8,32}$/;
+        if (pRegex.test(p) == false) {
+          alert("please enter a valid password");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
