@@ -24,8 +24,6 @@
         </a>
         <div class="ms-n3 me-auto display-6">Fair Money</div>
         <div class="align-self-end mb-3">
-          <!-- m-3 p-3 rounded-pill border border-5 border-warning bg-success
-          -->
           <a
             href="./signIn.html"
             class="btn btn-secondary btn-outline-dark rounded-pill py-2 px-4 mx-3"
@@ -77,9 +75,7 @@
                   <h3 class="fw-bold">Get Started</h3>
                   <h6>
                     already have an account
-                    <a href="./signIn.html" class="text-danger fw-semibold"
-                      >sign in</a
-                    >
+                    <a href="./signIn.html" class="text-danger fw-semibold">sign in</a>
                   </h6>
                   <form action="" onsubmit="validate()" class="">
                     <div class="mb-3">
@@ -93,12 +89,10 @@
                       />
                     </div>
                     <div class="mb-3">
-                      <label class="form-label" for="emailAddress"
-                        >Email Address</label
-                      >
+                      <label class="form-label" for="emailAddress">Email Address</label>
                       <input
                         class="form-control shadow"
-                        id="emailAddress"
+                        id="mail"
                         type="email"
                         placeholder="Email Address"
                         data-sb-validations="required,email"
@@ -108,9 +102,9 @@
                       <label class="form-label" for="password">Password</label>
                       <input
                         class="form-control shadow"
-                        id="password"
+                        id="pass"
                         type="password"
-                        placeholder="Password"
+                        placeholder="••••••••••••••••"
                         data-sb-validations="required"
                       />
                     </div>
@@ -118,8 +112,7 @@
                       <button
                         class="btn btn-primary shadow btn-lg mt-3"
                         id="submitButton"
-                        type="submit"
-                      >
+                        type="submit">
                         Register
                       </button>
                     </div>
@@ -139,16 +132,16 @@
           alert("Please enter a valid name");
           return false;
         }
-        var p = document.getElementById("pass").value;
-        var pRegex = /^([a-zA-Z$_0-9]){8,32}$/;
-        if (pRegex.test(p) == false) {
-          alert("please da5l el password  sa7");
-          return false;
-        }
         var m = document.getElementById("mail").value;
         var mREGEX = /^[a-zA-Z0-9_\.]{2,}@[a-zA-Z]+.[a-zA-Z]+$/;
         if (mREGEX.test(m) == false) {
           alert("Please re-enetr e-mail");
+          return false;
+        }
+        var p = document.getElementById("pass").value;
+        var pRegex = /^([a-zA-Z$_0-9]){8,32}$/;
+        if (pRegex.test(p) == false) {
+          alert("please enter a valid password");
           return false;
         }
       }
