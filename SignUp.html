@@ -11,6 +11,7 @@
       defer
       src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
     ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
     <nav class="navbar navbar-light bg-secondary shadow">
@@ -89,23 +90,32 @@
                       />
                     </div>
                     <div class="mb-3">
+                      <!-- TODO  JScript Handling checking if e-mail is written-->
                       <label class="form-label" for="emailAddress">Email Address</label>
-                      <input
-                        class="form-control shadow"
-                        id="mail"
-                        type="email"
-                        placeholder="Email Address"
-                      />
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-envelope-o"></i>
+                        </span>
+                        <input
+                          class="form-control shadow"
+                          id="mail"
+                          type="email"
+                          placeholder="Email Address"
+                        />
+                      </div> 
                     </div>
                     <div class="mb-3">
                       <label class="form-label" for="password">Password</label>
-                      <input
-                        class="form-control shadow"
-                        id="pass"
-                        type="password"
-                        placeholder="••••••••••••••••"
-                        data-sb-validations="required"
-                      />
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-lock"></i>
+                        </span>
+                        <input
+                          class="form-control shadow"
+                          id="pass"
+                          type="password"
+                          placeholder="••••••••••••••••"
+                          data-sb-validations="required"
+                        />
+                      </div>
                     </div>
                     <div class="d-grid">
                       <button
@@ -124,7 +134,8 @@
       </section>
     </div>
     <script type="text/javascript">
-      function validate() {
+      function validate() 
+      {
         var n = document.getElementById("name").value;
         var nREGEX = /^[a-zA-Z\s]{3,}$/;
         if (nREGEX.test(n) == false) {
@@ -134,7 +145,7 @@
         var m = document.getElementById("mail").value;
         var mREGEX = /^[a-zA-Z0-9_\.]{2,}@[a-zA-Z]+.[a-zA-Z]+$/;
         if (mREGEX.test(m) == false) {
-          alert("Please re-enetr e-mail");
+          alert("Please re-enter e-mail");
           return false;
         }
         var p = document.getElementById("pass").value;
