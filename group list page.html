@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Group List</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <script
+      defer
+      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-secondary shadow">
+      <div class="container">
+        <a href="./index.html" class="navbar-brand">
+          <img src="./images/icons8-tax-96.png" alt="Fair Money logo" width="80"
+          />
+        </a>
+        <div class="ms-n3 me-auto pt-3 h3 lh-1">
+          <div class="fw-bold d-lg-inline d-block">Welcome back!,</div>
+          user name
+        </div>
+        <div class="d-flex flex-md-row flex-column align-self-end mb-md-3 mb-0">
+          <!-- we still don't know  if we will you use anchor elements or
+          buttons, but if we gone we use buttons then all we will do copy the
+          classes from each anchor element and paste it in button elements-->
+          <a href="" class="btn btn-primary rounded-4 py-2 px-3 fw-semibold
+          mb-md-0 mb-2" >
+            <img class="me-1" src="./images/plus-icon.svg" alt="add icon" />new
+            group
+          </a>
+          <a href="" class="btn btn-secondary btn-outline-dark rounded-4 py-2
+          px-4 mx-md-3 mx-0" >Log out
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-image" style=" background-image:
+    url('./images/group-list-background.svg'); height: 89vh; background-repeat:
+    no-repeat; background-size: cover; " >
+      <section class="container h-100 bg-light overflow-auto col-md-12 col-lg-7
+      col-xl-5 scroller pt-5" >
+        <div class="row">
+          <!-- these are the names of classes written in main.scss file note
+          that all these classes still use bootstrap classes, i just group a
+          coup classes under the same name to make the script easier to read-->
+          <!-- -------------------------------------------------------------------- -->
+          <!-- cell : col-md-12 col-6 px-0 -->
+          <!-- card classes (card-light, card-gray) : bg-light my-3 rounded-5
+          container col-11 shadow-drop -->
+          <!-- card--header : text-light text-decoration-none bg-success
+          rounded-5 col-md-5 px-4 pt-1 pb-3 d-flex flex-column
+          justify-content-center -->
+          <!-- index--number : fs-6 -->
+          <!-- group--name : mt-n3 display-6 text-center -->
+          <!-- card--body : col-md-7 py-2 px-sm-4 px-1 -->
+          <!-- group--description : fw-semibold small d-flex flex-md-row
+          flex-column -->
+          <!-- members--description : d-flex w-50 pe-1 -->
+          <!-- modified--description : d-flex w-100 -->
+          <!-- description : fw-light -->
+          <div class="cell">
+            <div class="card--light">
+              <div class="row">
+                <a class="card--header" href="#">
+                  <div class="index--number">1.</div>
+                  <div class="group--name">group name</div>
+                </a>
+                <div class="card--body">
+                  <div class="group--description">
+                    <div class="members--description">
+                      <img class="align-self-baseline me-2"
+                      src="./images/people.svg" alt="gruop members" width="24"
+                      />
+                      <div class="members--Number">3</div>
+                      &nbsp;members
+                    </div>
+                    <div class="modified--description">
+                      <img class="me-2 align-self-center"
+                      src="./images/clock.svg" alt="gruop memebers" width="17"
+                      height="17" />
+                      <div class="d-flex flex-wrap">
+                        <div class="text-nowrap">last modified :&nbsp;</div>
+                        <div class="last--modified">12/12/2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, eum eveniet odit optiod
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card--gray">
+              <div class="row">
+                <a class="card--header" href="#">
+                  <div class="index--number">1.</div>
+                  <div class="group--name">group name</div>
+                </a>
+                <div class="card--body">
+                  <div class="group--description">
+                    <div class="members--description">
+                      <img class="align-self-baseline me-2"
+                      src="./images/people.svg" alt="gruop members" width="24"
+                      />
+                      <div class="members--Number">3</div>
+                      &nbsp;members
+                    </div>
+                    <div class="modified--description">
+                      <img class="me-2 align-self-center"
+                      src="./images/clock.svg" alt="gruop memebers" width="17"
+                      height="17" />
+                      <div class="d-flex flex-wrap">
+                        <div class="text-nowrap">last modified :&nbsp;</div>
+                        <div class="last--modified">12/12/2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, eum eveniet odit optiod
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card--light">
+            <div class="row">
+              <a class="card--header" href="#">
+                <div class="index--number">1.</div>
+                <div class="group--name">group name</div>
+              </a>
+              <div class="card--body">
+                <div class="group--description">
+                  <div class="members--description">
+                    <img class="align-self-baseline me-2"
+                    src="./images/people.svg" alt="gruop members" width="24" />
+                    <div class="members--Number">3</div>
+                    &nbsp;members
+                  </div>
+                  <div class="modified--description">
+                    <img class="me-2 align-self-center" src="./images/clock.svg"
+                    alt="gruop memebers" width="17" height="17" />
+                    <div class="d-flex flex-wrap">
+                      <div class="text-nowrap">last modified :&nbsp;</div>
+                      <div class="last--modified">12/12/2021</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis, eum eveniet odit optiod
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card--gray">
+            <div class="row">
+              <a class="card--header" href="#">
+                <div class="index--number">1.</div>
+                <div class="group--name">group name</div>
+              </a>
+              <div class="card--body">
+                <div class="group--description">
+                  <div class="members--description">
+                    <img class="align-self-baseline me-2"
+                    src="./images/people.svg" alt="gruop members" width="24" />
+                    <div class="members--Number">3</div>
+                    &nbsp;members
+                  </div>
+                  <div class="modified--description">
+                    <img class="me-2 align-self-center" src="./images/clock.svg"
+                    alt="gruop memebers" width="17" height="17" />
+                    <div class="d-flex flex-wrap">
+                      <div class="text-nowrap">last modified :&nbsp;</div>
+                      <div class="last--modified">12/12/2021</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis, eum eveniet odit optiod
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

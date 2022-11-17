@@ -5,3 +5,107 @@ $danger: #fd6584;
 $enable-negative-margins: true;
 // import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+/* -------------------------------------------------------------------------- */
+/* -------------------- animation for group card element -------------------- */
+// great tool to make animation https://animista.net/
+@keyframes shadow-drop {
+  0% {
+    transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateZ(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+.scroller {
+  scrollbar-color: #2f2e4159 #d9d9d9;
+  scrollbar-width: thin;
+}
+
+.shadow-drop {
+  animation: shadow-drop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both,
+    slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate-reverse both;
+}
+/* -------------------------------------------------------------------------- */
+/* ---------------------------- grouping classes ---------------------------- */
+// wtf i am doing : https://stackoverflow.com/questions/40892793/combine-multiple-bootstrap-classes-into-one-sass-class
+.cell {
+  @extend .col-md-12;
+  @extend .col-6;
+  @extend .px-0;
+}
+
+.card--light {
+  @extend .bg-light;
+  @extend .my-3;
+  @extend .rounded-5;
+  @extend .container;
+  @extend .col-11;
+  @extend .shadow-drop;
+}
+.card--gray {
+  @extend .bg-secondary;
+  @extend .my-3;
+  @extend .rounded-5;
+  @extend .container;
+  @extend .col-11;
+  @extend .shadow-drop;
+}
+
+.card--header {
+  @extend .text-light;
+  @extend .text-decoration-none;
+  @extend .bg-success;
+  @extend .rounded-5;
+  @extend .col-md-5;
+  @extend .px-4;
+  @extend .pt-1;
+  @extend .pb-3;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
+}
+.index--number {
+  @extend .fs-6;
+}
+.group--name {
+  @extend .mt-n3;
+  @extend .display-6;
+  @extend .text-center;
+}
+.card--body {
+  @extend .col-md-7;
+  @extend .py-2;
+  @extend .px-sm-4;
+  @extend .px-1;
+}
+.group--description {
+  @extend .fw-semibold;
+  @extend .small;
+  @extend .d-flex;
+  @extend .flex-md-row;
+  @extend .flex-column;
+}
+.members--description {
+  @extend .d-flex;
+  @extend .w-50;
+  @extend .pe-1;
+}
+.modified--description {
+  @extend .d-flex;
+  @extend .w-100;
+}
+.description {
+  @extend .fw-light;
+}
