@@ -46,7 +46,7 @@ $enable-negative-margins: true;
   @extend .px-0;
 }
 
-.card--light {
+.card {
   @extend .bg-light;
   @extend .my-3;
   @extend .rounded-5;
@@ -54,19 +54,24 @@ $enable-negative-margins: true;
   @extend .col-11;
   @extend .shadow-drop;
 }
-.card--gray {
-  @extend .bg-secondary;
-  @extend .my-3;
-  @extend .rounded-5;
-  @extend .container;
-  @extend .col-11;
-  @extend .shadow-drop;
-}
 
-.card--header {
+.card--header--dark {
   @extend .text-light;
   @extend .text-decoration-none;
   @extend .bg-success;
+  @extend .rounded-5;
+  @extend .col-md-5;
+  @extend .px-4;
+  @extend .pt-1;
+  @extend .pb-3;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
+}
+.card--header--gray {
+  @extend .text-dark;
+  @extend .text-decoration-none;
+  @extend .bg-secondary;
   @extend .rounded-5;
   @extend .col-md-5;
   @extend .px-4;
