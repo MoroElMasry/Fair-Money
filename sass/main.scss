@@ -2,7 +2,13 @@ $primary: #20c997;
 $secondary: #d9d9d9;
 $success: #2f2e41;
 $danger: #fd6584;
+$Warning: #dc3545;
 $enable-negative-margins: true;
+
+$accordion-button-active-bg: #ffffff00;
+$accordion-button-active-color: #000000;
+$accordion-button-focus-box-shadow: #ffffff00;
+
 // import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -113,4 +119,9 @@ $enable-negative-margins: true;
 }
 .description {
   @extend .fw-light;
+}
+/* -------------------------------------------------------------------------- */
+.rounded-start-4 {
+  border-top-left-radius: $border-radius-xl;
+  border-bottom-left-radius: $border-radius-xl;
 }

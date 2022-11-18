@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Group List</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <script
+      defer
+      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-secondary shadow">
+      <div class="container">
+        <a href="./index.html" class="navbar-brand">
+          <img
+            src="./images/icons8-tax-96.png"
+            alt="Fair Money logo"
+            width="80"
+          />
+        </a>
+        <div class="ms-n3 me-auto pt-3 h3 lh-1">
+          <div class="fw-bold d-lg-inline d-block">Welcome back!,</div>
+          user name
+        </div>
+        <div class="d-flex flex-md-row flex-column align-self-end mb-md-3 mb-0">
+          <a
+            href=""
+            class="btn btn-danger rounded-4 py-2 px-3 fw-semibold mb-md-0 mb-2"
+          >
+            <img class="me-1" src="./images/plus-icon.svg" alt="add icon" />new
+            record
+          </a>
+          <a
+            href=""
+            class="btn btn-secondary btn-outline-dark rounded-4 py-2 px-4 mx-md-3 mx-0"
+            >Log out
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="bg-image"
+      style="
+        background-image: url('./images/Wave.svg');
+        height: 89vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <section
+        class="container-xl h-100 bg-light overflow-auto col-xl-7 scroller pt-5"
+      >
+        <!-- TODO grouping classes as we did in group list page -->
+        <!-- TODO adding class for each place holder info -->
+        <!-- TODO in the nav bar in both the group list page and in specific group
+     page, add class for user name place holder -->
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-9 mb-3">
+            <div class="display-5">group name</div>
+            <div class="lead">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatem voluptas omnis distinctio cum, waq
+            </div>
+          </div>
+          <div class="ms-auto col-3">
+            <div
+              class="d-md-block d-none position-absolute bg-secondary ms-2 py-2 px-3 rounded-pill text-center fw-semibold"
+            >
+              &emsp;&emsp;&emsp;Back To <br />
+              &emsp;&emsp;&emsp;Group List
+            </div>
+            <a
+              href="./group list page.html"
+              class="position-absolute p-3 bg-light rounded-circle shadow"
+              ><img
+                src="./images/arrow-left-thin.svg"
+                alt="arrow-left"
+                width="33"
+                height="30"
+            /></a>
+          </div>
+        </div>
+        <div class="row h-75">
+          <div class="col-md-8 col-12 order-md-0 order-1 h-100">
+            <div
+              class="accordion shadow-lg rounded-4 overflow-auto h-100"
+              id="recordList"
+            >
+              <div class="accordion-item">
+                <h2
+                  class="accordion-header d-flex bg-secondary"
+                  id="headingOne"
+                >
+                  <div class="w-25"></div>
+                  <div class="bg-light flex-fill rounded-start-4"></div>
+                  <div class="bg-primary w-auto px-3 text-light">500</div>
+                  <button
+                    class="accordion-button collapsed rounded-0 w-auto p-1 bg-primary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  ></button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#recordList"
+                >
+                  <div class="accordion-body p-0">
+                    <ol class="list-group list-group-numbered">
+                      <li class="list-group-item">
+                        Peter paid all the money Peter owe to Ahmed
+                      </li>
+                      <li class="list-group-item">
+                        Peter paid 25 E£ from 75 E£, Peter still owe Ahmed 50 E£
+                      </li>
+                      <li class="list-group-item">Mona now owe Peter 25 E£</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row bg-info h-100 col-md-4 col-12 order-md-0 order-0">
+            <div class="bg-primary order-md-0 order-1 h-75"></div>
+            <div class="bg-dark order-md-1 order-0 h-25">
+              <div class="d-flex flex-md-column flex-row">
+                <div class="bg-light p-4"></div>
+                <div class="bg-danger p-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
