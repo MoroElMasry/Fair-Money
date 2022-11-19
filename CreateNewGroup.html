@@ -39,12 +39,89 @@
       >
       <section class="container-lg h-100">
         <div class="row justify-content-evenly align-items-center h-100">
-          <div
-            class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4"
-          >
+          <div class="p-5 text-dark bg-light col-11 col-sm-7 col-xl-6 shadow-lg rounded-4">
+            <div class="container">
+              <form action="" onsubmit="" class="">
+                <div>
+                  <label class="form-label" for="grpname">Group Name</label>
+                  <input
+                    class="form-control shadow"
+                    id="grpName"
+                    type="text"
+                    placeholder="Group Name"
+                    data-sb-validations="required"
+                  />
+                </div>
+                <div>
+                  <label class="form-label" for="grpdescription">Description</label>
+                  <input
+                    class="form-control shadow"
+                    id="grpDesc"
+                    type="text"
+                    placeholder="Description"
+                    data-sb-validations="required"
+                  />
+                </div>
+                <div>
+                  <label class="form-label" for="grpmembers">Group Members</label>
+                  
+                  <div class="row">
+                    <div class="col-8">
+                      <input
+                      class="form-control shadow"
+                      id="grpMembers"
+                      type="text"
+                      placeholder="Group Members"
+                      data-sb-validations="required"/>
+                    </div>
+
+                    <div class="col">
+                      <button
+                        class="btn btn-primary shadow "
+                        id="addMemBtn"
+                        type="submit">
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                 
+                  
+
+
+                </div>
+                <div class="d-grid">
+                  <button
+                    class="btn btn-primary shadow btn-lg mt-3"
+                    id="createNewMemBtn"
+                    type="submit"
+                  >
+                    Create New Group
+                  </button>
+                <!-- <div>
+                  <label for="">Group Name</label>
+                  <input type="text" >
+                </div>
+                <div>
+                  <label for="">Members</label>
+                  <input type="text" >
+                </div> -->
+<!-- ----------------------------------------------- -->
+                <!-- <table class="align-text-center">
+                  <tr>
+                    <th>
+                      <label for="" class="pe-2">Group Name</label>
+                    </th>
+                    <td>
+                      <input type="text" >
+                    </td>
+                  </tr>
+                </table> -->
+              </form>
+            </div>
+
+
 
           </div>
-
         </div>
         
       </section>
