@@ -30,6 +30,8 @@
           <a
             href=""
             class="btn btn-danger rounded-4 py-2 px-3 fw-semibold mb-md-0 mb-2"
+            data-bs-toggle="modal"
+            data-bs-target="#addRecord"
           >
             <img class="me-1" src="./images/plus-icon.svg" alt="add icon" />new
             record
@@ -42,6 +44,44 @@
         </div>
       </div>
     </nav>
+    <div
+      class="modal fade"
+      id="addRecord"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <!-- TODO complete new record form -->
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Modal title
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div
       class="bg-image"
       style="
@@ -70,6 +110,8 @@
             <div
               class="d-md-block d-none position-absolute bg-secondary ms-2 py-2 px-3 rounded-pill text-center fw-semibold"
             >
+              <!-- TODO try to make rounding only at the end of the element then
+            add the animation -->
               &emsp;&emsp;&emsp;Back To <br />
               &emsp;&emsp;&emsp;Group List
             </div>
@@ -87,17 +129,69 @@
         <div class="row h-75">
           <div class="col-md-8 col-12 order-md-0 order-1 h-100">
             <div
-              class="accordion shadow-lg rounded-4 overflow-auto h-100"
+              class="accordion shadow-lg rounded-4 overflow-auto h-100 scroller"
               id="recordList"
             >
-              <div class="accordion-item">
+              <div class="accordion-item mb-2 shadow">
                 <h2
                   class="accordion-header d-flex bg-secondary"
                   id="headingOne"
                 >
-                  <div class="w-25"></div>
-                  <div class="bg-light flex-fill rounded-start-4"></div>
-                  <div class="bg-primary w-auto px-3 text-light">500</div>
+                  <div class="w-25 py-1 fs-6 px-3">
+                    <div class="record--name text-overflow-2 fw-light fs-5">
+                      record name peter
+                    </div>
+                    <div
+                      class="d-flex flex-md-row flex-column fw-light small justify-content-between mt-2"
+                    >
+                      <!-- TODO make sure that this button only appear when this
+                    record is added by the user account (addedbyme , addedbyothers) -->
+                      <button
+                        class="rounded-5 p-2 border-0 order-md-0 order-1 mt-1 me-2"
+                      >
+                        <img
+                          class="align-self-center"
+                          src="./images/delete-icon-dark.svg"
+                          alt="delete icon"
+                          width="19"
+                          height="19"
+                        />
+                      </button>
+                      <div class="d-flex order-md-1 order-0">
+                        <img
+                          class="me-2 align-self-center"
+                          src="./images/clock.svg"
+                          alt="gruop memebers"
+                          width="15"
+                          height="15"
+                        />
+                        <div class="last--modified align-self-center">
+                          12/12/2021
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex bg-light flex-fill rounded-start-4 p-3 align-items-baseline"
+                  >
+                    <img
+                      class="me-2"
+                      src="./images/people.svg"
+                      alt="people"
+                      width="24"
+                    />
+                    <div class="fs-5 fw-light text-overflow-2">
+                      shared with:&nbsp;
+                      <span class="">
+                        ahmed, ali, mona, rashad, peter, kamal, masry, seif
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex bg-primary w-auto px-2 text-light align-items-center"
+                  >
+                    500 <span class="text-dark">&nbsp;E£</span>
+                  </div>
                   <button
                     class="accordion-button collapsed rounded-0 w-auto p-1 bg-primary"
                     type="button"
@@ -128,12 +222,65 @@
               </div>
             </div>
           </div>
-          <div class="row bg-info h-100 col-md-4 col-12 order-md-0 order-0">
-            <div class="bg-primary order-md-0 order-1 h-75"></div>
-            <div class="bg-dark order-md-1 order-0 h-25">
+          <div
+            class="d-flex flex-column h-100 col-md-4 col-12 order-md-1 order-0"
+          >
+            <div
+              class="bg-secondary order-md-0 order-1 flex-fill p-0 rounded-4 overflow-auto scroller mb-2 border border-primary border-2"
+            >
+              <div class="d-flex shadow-drop bg-secondary mb-2">
+                <img
+                  class="m-2"
+                  src="./images/profiles/male profile1.svg"
+                  alt="profile"
+                  width="50"
+                />
+                <div
+                  class="align-self-center fs-2 fw-light w-50 baseline text-overflow-2"
+                >
+                  user name
+                </div>
+                <div class="youOwesUser">
+                  505
+                  <img
+                    class="caretLeft mx-2 mt-1"
+                    src="./images/caret-left.svg"
+                    alt="caret left"
+                    width="13"
+                  />
+                  <img
+                    class="caretRight mx-2 mt-1"
+                    src="./images/caret-right.svg"
+                    alt="caret right"
+                    width="13"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="order-md-1 order-0 p-0">
               <div class="d-flex flex-md-column flex-row">
-                <div class="bg-light p-4"></div>
-                <div class="bg-danger p-4"></div>
+                <button
+                  class="flex-fill btn btn-warning border-0 rounded-5 p-2 text-light fs-3 fw-semibold mb-2"
+                >
+                  <img
+                    class="mb-1"
+                    src="./images/delete-icon.svg"
+                    alt=""
+                    width="27"
+                  />
+                  Delete Group
+                </button>
+                <button
+                  class="flex-fill btn btn-primary border-0 rounded-5 p-2 text-light fs-3 fw-semibold mb-2"
+                >
+                  <img
+                    class="mb-1"
+                    src="./images/create-icon.svg"
+                    alt=""
+                    width="27"
+                  />
+                  Edit Group
+                </button>
               </div>
             </div>
           </div>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="680.763 115.8 20 20" xmlns="http://www.w3.org/2000/svg">
+  <g style="" transform="matrix(0.041842, 0, 0, 0.041842, 663.270996, 120.387001)">
+    <path d="M 515.313 -19.616 L 535.313 300.384 C 536.263 318.874 549.713 332.384 567.313 332.384 L 751.313 332.384 C 768.983 332.384 782.183 318.874 783.313 300.384 L 803.313 -19.616" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" style="stroke: rgb(255, 255, 255);"/>
+    <path stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M 483.313 -19.616 L 835.313 -19.616" style="stroke: rgb(255, 255, 255);"/>
+    <path d="M 595.313 -19.616 L 595.313 -59.616 C 595.274 -72.887 606.042 -83.655 619.313 -83.616 L 699.313 -83.616 C 712.583 -83.655 723.351 -72.887 723.313 -59.616 L 723.313 -19.616 M 659.313 44.384 L 659.313 268.384 M 587.313 44.384 L 595.313 268.384 M 731.313 44.384 L 723.313 268.384" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" style="stroke: rgb(255, 255, 255);"/>
+  </g>
+</svg>

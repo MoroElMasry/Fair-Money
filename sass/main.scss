@@ -2,7 +2,7 @@ $primary: #20c997;
 $secondary: #d9d9d9;
 $success: #2f2e41;
 $danger: #fd6584;
-$Warning: #dc3545;
+$warning: #dc3545;
 $enable-negative-margins: true;
 
 $accordion-button-active-bg: #ffffff00;
@@ -124,4 +124,45 @@ $accordion-button-focus-box-shadow: #ffffff00;
 .rounded-start-4 {
   border-top-left-radius: $border-radius-xl;
   border-bottom-left-radius: $border-radius-xl;
+}
+
+@mixin text-overflow-x {
+  @for $i from 1 through 4 {
+    .text-overflow-#{$i} {
+      display: -webkit-box;
+      -webkit-line-clamp: $i;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+@include text-overflow-x;
+
+.userOwesYou {
+  @extend .d-flex;
+  @extend .bg-light;
+  @extend .fs-2;
+  @extend .fw-bold;
+  @extend .text-primary;
+  @extend .flex-fill;
+  @extend .rounded-start-4;
+  @extend .align-items-center;
+  @extend .ps-3;
+}
+.youOwesUser {
+  @extend .d-flex;
+  @extend .bg-light;
+  @extend .fs-2;
+  @extend .fw-bold;
+  @extend .text-warning;
+  @extend .flex-fill;
+  @extend .rounded-start-4;
+  @extend .align-items-center;
+  @extend .ps-3;
+}
+.userOwesYou .caretRight {
+  display: none;
+}
+.youOwesUser .caretLeft {
+  display: none;
 }
