@@ -76,9 +76,9 @@
                   />
                 </div>
                 <div>
-                  <label class="form-label" for="grpdescription"
-                    >Description</label
-                  >
+                  <label class="form-label" for="grpdescription">
+                    Description
+                  </label>
                   <div class="input-group">
                     <span class="input-group-text" id="inputGroupPrepend">
                       <svg
@@ -107,41 +107,27 @@
                   <label class="form-label" for="grpmembers">
                     Group Members
                   </label>
-                  <div class="row">
-                    <div class="col-8">
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            class="bi bi-person-fill-add"
-                            viewBox="0 0 16 16"
-                          >
-                            <path
-                              d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                            />
-                            <path
-                              d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"
-                            />
-                          </svg>
-                        </span>
-                        <input
-                          class="form-control shadow"
-                          id="grpMembers"
-                          type="text"
-                          placeholder="Group Members"
-                          data-sb-validations="required"
-                        />
-                      </div>
+                  <div class="d-flex">
+                    <div class="input-group">
+                      <span class="input-group-text" id="">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-person-fill-add"
+                          viewBox="0 0 16 16">
+                          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                          <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+                        </svg>
+                      </span>
+                      <input
+                        class="form-control shadow w-75" id="grpMembers" type="text" placeholder="Group Members" data-sb-validations="required"
+                      />
                     </div>
-                    <div class="col">
-                      <button
-                        class="btn btn-primary shadow"
-                        id="addMemBtn"
-                        type="submit"
-                      >
+                    <div class="ms-auto">
+                      <button class="btn btn-primary shadow ms-4 btn-lg" id="addMemBtn" type="submit" >
+                        <!-- 82.2667×37.6 -->
                         Add
                       </button>
                     </div>
@@ -152,60 +138,34 @@
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                   </svg>  -->
-                  <div class="bg-secondary">
-                    <!-- <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                      <label for="floatingTextarea">Comments</label>
-                    </div> -->
-                    <!-- list item -->
+                  <div class="bg-secondary mt-3">
                     <div class="d-flex">
                       <img
-                        src="./images/profiles/male profile2.svg"
+                        src="./images/profiles/male profile4.svg"
                         alt=""
                         width="30"
+                        class="ms-1"
                       />
-                      <div class="">
-                        <div class="container">
-                          <h4>User name</h4>
-                        </div>
-                      </div>
-                      <button
-                        class="btn btn-seondary btn-outline-dark shadow ms-auto"
-                      >
+                      <h4 class="ms-3">User name 1</h4>
+                      <button class="btn btn-seondary btn-outline-dark shadow ms-auto">
                         Remove
                       </button>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="card shadow" style="width: 330px; height: 80px; background-color: white;">
-                      <div class="row">
-                        <div class="col-3 pt-4">
-                          <span class="input-group-text" id="" style="width: 40px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="col-3">
-                          <div class="details">
-                            <h3>User name</h3>
-                            <a href="">user_name@email.com</a>
-                          </div>
-                        </div>
-                        <div class="col-2">
-                           <a href="" class="btn btn_secondary btn-outline-dark rounded-circle shadow">
-                            Remove
-                          </a>
-                          <button class="btn btn-seondary btn-outline-dark shadow btn-sm">Remove</button>
-                        </div>
-                      </div>
-                    </div> -->
                   </div>
-
-                  <!-- <div class="form-floating pt-2 shadow">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Members</label>
-                  </div> -->
+                  <div class="bg-secondary mt-3">
+                    <div class="d-flex">
+                      <img
+                        src="./images/profiles/female profile2.svg"
+                        alt=""
+                        width="30"
+                        class="ms-1"
+                      />
+                      <h4 class="ms-3">User name 2</h4>
+                      <button class="btn btn-seondary btn-outline-dark shadow ms-auto">
+                        Remove
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="text-end">
