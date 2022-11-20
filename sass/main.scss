@@ -15,6 +15,8 @@ $accordion-button-focus-box-shadow: #ffffff00;
 /* -------------------------------------------------------------------------- */
 /* -------------------- animation for group card element -------------------- */
 // great tool to make animation https://animista.net/
+// TODO make sure that animation is smooth by removing the slide animation
+// or by making it faster or putting the items in a container and animating the container
 @keyframes shadow-drop {
   0% {
     transform: translateZ(0);
@@ -44,7 +46,7 @@ $accordion-button-focus-box-shadow: #ffffff00;
     slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate-reverse both;
 }
 /* -------------------------------------------------------------------------- */
-/* ---------------------------- grouping classes ---------------------------- */
+/* ------------------- grouping classes in group list page ------------------ */
 // wtf i am doing : https://stackoverflow.com/questions/40892793/combine-multiple-bootstrap-classes-into-one-sass-class
 .cell {
   @extend .col-md-12;
@@ -137,7 +139,8 @@ $accordion-button-focus-box-shadow: #ffffff00;
   }
 }
 @include text-overflow-x;
-
+/* -------------------------------------------------------------------------- */
+/* ----------------- grouping classes in specific group page ---------------- */
 .userOwesYou {
   @extend .d-flex;
   @extend .bg-light;
@@ -164,5 +167,16 @@ $accordion-button-focus-box-shadow: #ffffff00;
   display: none;
 }
 .youOwesUser .caretLeft {
+  display: none;
+}
+
+.group--user--card,
+.group--admin--card {
+  @extend .d-flex;
+  @extend .shadow-drop;
+  @extend .bg-secondary;
+  @extend .mb-2;
+}
+.group--user--card > div:first-of-type > img:first-of-type {
   display: none;
 }
