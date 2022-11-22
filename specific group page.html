@@ -11,7 +11,7 @@
       defer
       src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
     ></script>
-    <!-- <script
+    <script
       src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js"
       type="text/javascript"
     ></script>
@@ -19,7 +19,7 @@
       $(document).ready(function () {
         $("#addRecord").modal("show");
       });
-    </script> -->
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-light bg-secondary shadow">
@@ -127,6 +127,11 @@
                 >
                   user@gmail.com
                 </div>
+                <button
+                  class="btn btn-secondary btn-outline-dark rounded-4 ms-auto me-2 my-3"
+                >
+                  remove
+                </button>
               </div>
             </div>
             <div class="d-lg-none d-block col d-flex p-2">
@@ -163,8 +168,8 @@
       >
         <!-- TODO grouping classes as we did in group list page -->
         <!-- TODO adding class for each place holder info -->
-        <!-- TODO in the nav bar in both the group list page and in specific group
-     page, add class for user name place holder -->
+        <!-- TODO in the nav bar in both the group list page and in specific
+     group page, add class for user name place holder -->
         <div class="row">
           <div class="col-lg-5 col-md-6 col-9 mb-3">
             <div class="display-5">group name</div>
@@ -177,8 +182,6 @@
             <div
               class="d-md-block d-none position-absolute bg-secondary ms-2 py-2 px-3 rounded-pill text-center fw-semibold"
             >
-              <!-- TODO try to make rounding only at the end of the element then
-            add the animation -->
               &emsp;&emsp;&emsp;Back To <br />
               &emsp;&emsp;&emsp;Group List
             </div>
@@ -212,7 +215,8 @@
                       class="d-flex flex-md-row flex-column fw-light small justify-content-between mt-2"
                     >
                       <!-- TODO make sure that this button only appear when this
-                    record is added by the user account (addedbyme , addedbyothers) -->
+                    record is added by the user account (addedbyme ,
+                    addedbyothers) -->
                       <button
                         class="rounded-5 p-2 border-0 order-md-0 order-1 mt-1 me-2"
                       >
@@ -340,10 +344,12 @@
                     means this user owes you money
                   </div>
                   <div>
-                    <img src="./images/red square.svg" alt="red square" />
-                    means you own this user money
+                    <img src="./images/red square.svg" alt="red square" /> means
+                    you own this user money
                   </div>
                 </div>
+                <!-- TODO don't forget this buttons must be visible for the
+                admin of the group only-->
                 <button
                   class="flex-fill btn btn-warning border-0 rounded-5 p-2 text-light fs-3 fw-semibold mb-2 me-md-0 me-1"
                 >
