@@ -14,8 +14,6 @@ $accordion-button-focus-box-shadow: #ffffff00;
 /* -------------------------------------------------------------------------- */
 /* -------------------- animation for group card element -------------------- */
 // great tool to make animation https://animista.net/
-// TODO make sure that animation is smooth by removing the slide animation
-// or by making it faster or putting the items in a container and animating the container
 @keyframes shadow-drop {
   0% {
     transform: translateZ(0);
@@ -26,12 +24,14 @@ $accordion-button-focus-box-shadow: #ffffff00;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
 }
-@keyframes slide-top {
+@keyframes slide-in-left {
   0% {
-    transform: translateY(0);
+    transform: translateX(-1000px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(-100px);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -42,7 +42,7 @@ $accordion-button-focus-box-shadow: #ffffff00;
 
 .shadow-drop {
   animation: shadow-drop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both,
-    slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate-reverse both;
+    slide-in-left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 /* -------------------------------------------------------------------------- */
 /* ------------------- grouping classes in group list page ------------------ */
@@ -120,6 +120,8 @@ $accordion-button-focus-box-shadow: #ffffff00;
 }
 .description {
   @extend .fw-light;
+  @extend .px-sm-0;
+  @extend .px-1;
 }
 /* -------------------------------------------------------------------------- */
 .rounded-start-4 {
