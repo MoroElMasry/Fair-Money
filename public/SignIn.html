@@ -12,6 +12,7 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
     <script defer src="js/bootstrap.min.js"></script>
+    <script src="./js/SignIn.js" type="text/javascript"></script>
   </head>
   <body>
     <nav class="navbar navbar-light bg-secondary shadow">
@@ -53,7 +54,7 @@
             <div class="mt-3 fw-bold fs-2 text-center">Welcome Back!</div>
 
             <div class="container px-5 my-5">
-              <form class="signInForm">
+              <form class="signInForm" onsubmit="validate()">
                 <div class="mb-3">
                   <label class="form-label" for="emailAddress"
                     >Email Address</label

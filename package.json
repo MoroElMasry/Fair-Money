@@ -22,7 +22,10 @@
     "bootstrap": "^5.2.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "i": "^0.3.7",
+    "morgan": "^1.10.0",
+    "save": "^2.9.0",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "eslint": "^8.29.0",
