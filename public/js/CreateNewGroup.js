@@ -11,7 +11,7 @@ function validate()
   if(grpN =='' || GrpDesc =='')
   {
     // alert("Please Fill The Missing Fields!");
-    swal("Nothing is entered!", "Please fill the next fields!", "warning");
+    swal("Some Field is Empty!", "Please fill the next fields!", "warning");
     return false;
   }
   else
