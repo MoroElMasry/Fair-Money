@@ -4,7 +4,8 @@ function validate()
     var p = document.getElementById("password").value;
     if(m =='' || p =='')
     {
-      alert("Please Fill The Missing Fields!")
+      alert("Please Fill The Missing Fields!");
+      return false;
     }
     else
     {

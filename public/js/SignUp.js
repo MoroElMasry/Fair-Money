@@ -7,7 +7,9 @@ function validate()
   var nREGEX = /^[a-zA-Z\s]{3,}$/; // at least lower uper space
   if(n == '' || m =='' || p =='')
   {
-    alert("Please Fill The Missing Fields!")
+    alert("Please Fill The Missing Fields!");
+    // swal("Oops! Wrong Format!", "Please enter a valid Group name!", "error");
+    return false;
   }
   else
   {

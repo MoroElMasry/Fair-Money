@@ -10,7 +10,8 @@ function validate()
 
   if(grpN =='' || GrpDesc =='')
   {
-    alert("Please Fill The Missing Fields!")
+    alert("Please Fill The Missing Fields!");
+    return false;
   }
   else
   {
