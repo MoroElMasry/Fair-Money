@@ -16,5 +16,5 @@
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
   },
-  "ignorePatterns": ["public/js/*.js"]
+  "ignorePatterns": ["public/js/*.js", "public/js/bootstrap_js/*.js"]
 }

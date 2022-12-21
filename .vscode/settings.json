@@ -6,5 +6,6 @@
       "savePath": "/public/css"
     }
   ],
+  "todo-tree.filtering.excludeGlobs": ["**/public/js/bootstrap_js"],
   "liveServer.settings.port": 5501
 }
