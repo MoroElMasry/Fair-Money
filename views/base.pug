@@ -1,15 +1,13 @@
 doctype html
-html
-  head 
-    title natours #{title}
-    link(rel='stylesheet' href='css/main.min.css')
-    link(rel='shortcut icon' type='image/png' href='images/icons8-tax-96.png')
-  
-  body
-    h1= title
-    h1= user.toUpperCase()
-
-    -const x=8;
-    h2=2*x
-
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quis autem ipsa reprehenderit impedit esse adipisci omnis aliquid cumque quisquam harum animi, nihil ratione aperiam commodi quidem sit culpa iusto.
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title #{title}
+  link(rel='shortcut icon' type='image/png' href='images/icons8-tax-96.png')
+  link(rel='stylesheet' href='./css/main.min.css')
+  script(defer src='js/bootstrap_js/bootstrap.min.js')
+  script(defer src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')
+  script(defer src='js/index.js')
+  block reference
+block content

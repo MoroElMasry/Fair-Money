@@ -1,0 +1,124 @@
+extends base
+
+block reference
+  //- script(src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js' type='text/javascript')
+  //- script(type='text/javascript').
+  //-   $(document).ready(function () {
+  //-   $("#addRecord").modal("show");
+  //-   });
+block content
+  include _signedInNavBar
+  +specifyActionButton('newRecord')
+  #addRecord.modal.fade.modal-lg(tabindex='-1 ' data-bs-backdrop='static' data-bs-keyboard='false' aria-labelledby='staticBackdropLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body.row.py-2
+          .col-lg-8.col-12.p-2
+            label.form-label.mb-n2.fs-5.fw-light.text-success(for='recordNameInput') record name
+            input#recordNameInput.form-control(type='text')
+            label.form-label.mb-n2.fs-5.fw-light.text-success(for='amountInput') amount
+            input#amountInput.form-control(type='number' min='0')
+            label.form-label.mb-n2.fs-5.fw-light.text-success(for='accountsInput')
+              | who ows you money?
+            .input-group.mb-3
+              span.input-group-text @
+              input#accountsInput.form-control(type='text')
+              button.px-4.btn.btn-primary add
+            .d-lg-flex.d-none
+              button.btn.btn-secondary.rounded-3.fw-bold.w-50.me-1(type='button' data-bs-dismiss='modal')
+                | Close
+              button.btn.btn-primary.rounded-3.fw-bold.w-50.ms-1(type='button')
+                | create a record
+          .col-lg-4.col-12.bg-secondary.p-0.rounded-4.overflow-auto.scroller(style='height: 285px')
+            .group--user--card
+              img.m-2(src='./images/profiles/male profile1.svg' alt='profile' width='50')
+              .align-self-center.small.fw-light.baseline.text-overflow-2
+                | user@gmail.com
+              button.btn.btn-secondary.btn-outline-dark.rounded-4.ms-auto.me-2.my-3
+                | remove
+          .d-lg-none.d-block.col.d-flex.p-2
+            button.btn.btn-secondary.rounded-3.fw-bold.w-50.me-1(type='button' data-bs-dismiss='modal')
+              | Close
+            button.btn.btn-primary.rounded-3.fw-bold.w-50.ms-1(type='button')
+              | create a record
+  .bg-image(style="\
+  background-image: url('./images/Wave.svg');\
+  height: 89vh;\
+  background-repeat: no-repeat;\
+  background-size: cover;\
+  ")
+    section.container-xl.h-100.bg-light.overflow-auto.col-xl-7.scroller.pt-5
+      .row
+        .col-lg-5.col-md-6.col-9.mb-3
+          .display-5 group name
+          .lead
+            | Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            | Voluptatem voluptas omnis distinctio cum, waq
+        .ms-auto.col-3
+          .d-md-block.d-none.position-absolute.bg-secondary.ms-2.py-2.px-3.rounded-pill.text-center.fw-semibold
+            | &emsp;&emsp;&emsp;Back To 
+            br
+            | &emsp;&emsp;&emsp;Group List
+          a.position-absolute.p-3.bg-light.rounded-circle.shadow(href='./groupListPage')
+            img(src='./images/arrow-left-thin.svg' alt='arrow-left' width='33' height='30')
+      .row.h-75
+        .col-md-8.col-12.order-md-0.order-1.h-100
+          #recordList.accordion.shadow-lg.rounded-4.overflow-auto.h-100.scroller
+            .accordion-item.mb-2.shadow
+              h2#headingOne.accordion-header.d-flex.bg-secondary
+                .w-25.py-1.fs-6.px-3
+                  .record--name.text-overflow-2.fw-light.fs-5
+                    | record name
+                  .d-flex.flex-md-row.flex-column.fw-light.small.justify-content-between.mt-2
+                    button.rounded-5.p-2.border-0.order-md-0.order-1.mt-1.me-2
+                      img.align-self-center(src='./images/delete-icon-dark.svg' alt='delete icon' width='19' height='19')
+                    .d-flex.order-md-1.order-0
+                      img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='15' height='15')
+                      .last--modified.align-self-center
+                        | 12/12/2021
+                .d-flex.bg-light.flex-fill.rounded-start-4.p-3.align-items-baseline
+                  img.me-2(src='./images/people.svg' alt='people' width='24')
+                  .fs-6.fw-light.text-overflow-3
+                    | shared with:&nbsp;
+                    span
+                      | ahmed, ali, mona, rashad, peter, kamal, masry, seif
+                .d-flex.bg-primary.w-auto.px-2.text-light.align-items-center
+                  | 500 
+                  span.text-dark &nbsp;E&pound;
+                button.accordion-button.collapsed.rounded-0.w-auto.p-1.bg-primary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+              #collapseOne.accordion-collapse.collapse(aria-labelledby='headingOne' data-bs-parent='#recordList')
+                .accordion-body.p-0
+                  ol.list-group.list-group-numbered
+                    li.list-group-item
+                      | Peter paid all the money Peter owe to Ahmed
+                    li.list-group-item
+                      | Peter paid 25 E&pound; from 75 E&pound;, Peter still owe Ahmed 50 E&pound;
+                    li.list-group-item Mona now owe Peter 25 E&pound;
+        .d-flex.flex-column.h-100.col-md-4.col-12.order-md-1.order-0
+          .bg-secondary.order-md-0.order-1.flex-fill.p-0.rounded-4.overflow-auto.scroller.mb-2.border.border-primary.border-2
+            .group--admin--card
+              .position-relative
+                img.position-absolute.top-0.end-0.mt-2.me-2(src='./images/key icon.svg' alt='key icon' width='15')
+                img.m-2(src='./images/profiles/male profile1.svg' alt='profile' width='50')
+              .align-self-center.fs-2.fw-light.w-50.baseline.text-overflow-2
+                | user name
+              .youOwesUser
+                | 505
+                img.caretLeft.mx-2.mt-1(src='./images/caret-left.svg' alt='caret left' width='13')
+                img.caretRight.mx-2.mt-1(src='./images/caret-right.svg' alt='caret right' width='13')
+          .order-md-1.order-0.p-0
+            .d-flex.flex-md-column.flex-row
+              .ms-3.mb-2.d-md-block.d-none.fw-light.small
+                div
+                  img(src='./images/green square.svg' alt='green square')
+                  |                     means this user owes you money
+                div
+                  img(src='./images/red square.svg' alt='red square')
+                  |  means
+                  |                     you own this user money
+              button.flex-fill.btn.btn-warning.border-0.rounded-5.p-2.text-light.fs-3.fw-semibold.mb-2.me-md-0.me-1
+                img.mb-1(src='./images/delete-icon.svg' alt='' width='27')
+                |                   Delete Group
+              button.flex-fill.btn.btn-primary.border-0.rounded-5.p-2.text-light.fs-3.fw-semibold.mb-2.ms-md-0.ms-1
+                img.mb-1(src='./images/create-icon.svg' alt='' width='27')
+                |                   Edit Groupc

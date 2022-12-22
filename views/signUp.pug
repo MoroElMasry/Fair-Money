@@ -1,0 +1,50 @@
+extends base
+
+block reference
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+  script(defer src='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js')
+  script(defer src='./js/SignUp.js' type='text/javascript')
+
+block content
+  include _loggedOutNavBar
+  .bg-image(style="\
+  background-image: url('./images/sign background.svg');\
+  height: 89vh;\
+  background-repeat: no-repeat;\
+  background-size: cover;\
+  ")
+    section.container-lg.h-100
+      .row.justify-content-evenly.align-items-center.h-100
+        .p-5.text-dark.bg-light.col-11.col-sm-7.col-xl-6.shadow-lg.rounded-4
+          .container
+            .row
+              .col-md-5.d-none.d-md-block.my-5.container
+                .container
+                  .d-inline.fw-semibold.text-bg-primary
+                    | Register Now
+                  span &#x2728;
+                  .fw-semibold.text-dark
+                    | &amp; Start Sharing Expenses
+                  img.img-fluid.mt-1(src='./images/undraw_join_re_w1lh.svg' alt='Person Using Calculator')
+              .col-md-5.text-center.text-md-start.ps-0.mx-4
+                h3.fw-bold Get Started
+                h6
+                  | already have an account&nbsp;
+                  a.text-danger.fw-semibold(href='./signIn') sign in
+                form.SignUpForm(action='' onsubmit='return validate(event)' id='')
+                  .mb-3
+                    label.form-label(for='name') Name
+                    input#name.form-control.shadow(type='text' placeholder='Name' data-sb-validations='required')
+                  .mb-3
+                    label.form-label(for='emailAddress') Email Address
+                    input#mail.form-control.shadow(type='text' placeholder='Email Address' data-sb-validations='required,email')
+                  .mb-3
+                    label.form-label(for='password') Password
+                    .input-group
+                      span#inputGroupPrepend.input-group-text
+                        i.fa.fa-lock
+                      input#pass.form-control.shadow(type='password' placeholder='••••••••••••••••' data-sb-validations='required')
+                  .d-grid
+                    button#submitButton.btn.btn-primary.shadow.btn-lg.mt-3(type='submit')
+                      | Register

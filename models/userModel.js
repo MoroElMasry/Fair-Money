@@ -1,6 +1,15 @@
+const fs = require("fs");
 const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
+
+const profilesFolder = `${__dirname}/../public/images/profiles`;
+
+const imagesPath = fs
+  .readdirSync(profilesFolder)
+  .map((file) =>
+    profilesFolder.replace(`${__dirname}/../public/`, "").concat("/", file)
+  );
 
 const userScheme = new mongoose.Schema({
   name: {
@@ -14,7 +23,12 @@ const userScheme = new mongoose.Schema({
     lowercase: true,
     validate: [validator.isEmail, "please provide a valid email"],
   },
-  photo: String,
+  photo: {
+    type: String,
+    // default: function () {
+    //   return imagesPath[Math.floor(Math.random() * imagesPath.length)];
+    // },
+  },
   password: {
     type: String,
     required: [true, "please provide a password"],
@@ -29,6 +43,10 @@ userScheme.pre("save", async function (next) {
 
   this.password = await bcrypt.hash(this.password, 12);
 
+  next();
+});
+userScheme.pre("save", function (next) {
+  this.photo = imagesPath[Math.floor(Math.random() * imagesPath.length)];
   next();
 });
 userScheme.methods.correctPassword = async function (userPassword) {

@@ -19,7 +19,6 @@ const createSendToken = (user, statusCode, res) => {
   };
   if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-  console.log("object");
   res.cookie("jwt", token, cookieOptions);
 
   // Remove password from output
@@ -34,6 +33,7 @@ const createSendToken = (user, statusCode, res) => {
 };
 
 exports.signup = catchAsync(async (req, res, next) => {
+  // TODO return a user friendly message if the user is already exits
   const newUser = await User.create({
     name: req.body.name,
     email: req.body.email,
@@ -62,6 +62,7 @@ exports.login = catchAsync(async (req, res, next) => {
 });
 
 exports.logout = (req, res) => {
+  console.log("object");
   res.cookie("jwt", "loggedout", {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true,
@@ -77,6 +78,8 @@ exports.protect = catchAsync(async (req, res, next) => {
     req.headers.authorization.startsWith("Bearer")
   ) {
     token = req.headers.authorization.replace("Bearer ", "");
+  } else if (req.cookies.jwt) {
+    token = req.cookies.jwt;
   }
   if (!token) {
     return next(
@@ -99,3 +102,29 @@ exports.protect = catchAsync(async (req, res, next) => {
   req.user = selectedUser;
   next();
 });
+
+exports.isLoggedIn = async (req, res, next) => {
+  // getting token and check if it's exists
+  let token;
+  if (req.cookies.jwt) {
+    try {
+      token = req.cookies.jwt;
+      // verification token
+      const decodedPayload = await promisify(jwt.verify)(
+        token,
+        process.env.JWT_SECRET
+      );
+      // check if user still exists
+      const selectedUser = await User.findById(decodedPayload.id);
+      if (!selectedUser) {
+        return next();
+      }
+      // grant access to protected route
+      res.locals.user = selectedUser;
+      return next();
+    } catch (err) {
+      return next();
+    }
+  }
+  next();
+};

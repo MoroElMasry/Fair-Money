@@ -1,0 +1,72 @@
+extends base
+
+block reference
+
+block content
+  include _navBar
+  // elbody el flnos fe klam w fe soora
+  section#intro
+    .container-lg.mt-5
+      .row.justify-content-evenly.align-items-center
+        .col-md-5.text-center.text-md-start
+          h1.display-5.fw-bold
+            div Less Stress When Sharing Expenses
+            .d-inline.text-primary
+              | With Anyone
+              img.me-3.mb-2(src='./images/tick.png' alt='tick' height='40')
+          .lead.mt-3
+            | Keep track of your shared expenses and balances with housemates,
+            | trips, groups, friends, and family.
+        .col-md-5.d-none.d-md-block
+          img.img-fluid(src='./images/undraw_calculator_re_alsc.svg' alt='Person Using Calculator')
+  // El Cards
+  section.py-5.bg-danger.my-5.h-auto
+    .container
+      .row.g-4.justify-content-center.px-xl-5
+        // BOX 1
+        .col-6.col-md-3
+          .card.text-dark.bg-secondary.h-100.px-3.py-5.rounded-4.shadow
+            img.mb-3(src='./images/analytics.svg' alt='Graph Analytics' height='60' width='60')
+            h3.card-title.mb-3.fw-bold Track Balances
+            p.card-text
+              | Keep Track of Shared Expenses, Balances, and Who Owes Who.
+        // BOX 2
+        .col-6.col-md-3
+          .card.text-dark.bg-secondary.h-100.px-3.py-5.rounded-4.shadow
+            img.mb-3(src='./images/briefcase.svg' alt='briefcase' height='60' width='60')
+            h3.card-title.mb-3.fw-bold Organize Expenses
+            p.card-text
+              | Split expenses with any group: trips, housemates, friends, and
+              | family.
+        // BOX 3
+        .col-6.col-md-3
+          .card.text-dark.bg-secondary.h-100.px-3.py-5.rounded-4.shadow
+            img.mb-3(src='./images/cash.svg' alt='cash' height='60' width='60')
+            h3.card-title.mb-3.fw-bold Track Balances
+            p.card-text
+              | Quickly add expenses on the go before you forget who paid.
+        // BOX 4
+        .col-6.col-md-3
+          .card.text-dark.bg-secondary.h-100.px-3.py-5.rounded-4.shadow
+            img.mb-3(src='./images/people-circle.svg' alt='people' height='60' width='60')
+            h3.card-title.mb-3.fw-bold Pay Friends Back
+            p.card-text
+              | Settle up with a friend and record any cash or online payment.
+  // elbody el t7t fe soora w fe klam
+  section#last
+    .container-lg.mb-4
+      .row.justify-content-evenly.align-items-center
+        .col-md-4.d-none.d-md-block
+          img.img-fluid(src='./images/undraw_wallet_re_cx9u.svg' alt='Person Using\
+          Calculator' width='235')
+        .col-md-5.text-center.text-md-start
+          div
+            h2.fw-bold
+              | Makes It Easy to
+              .d-inline.text-primary Split Bills
+              |                 With Friends And Family.
+            h1.lead.fs-5.mt-3
+              | We Organize All Your Shared Expenses in One Place, so that
+              | Everyone Can See Who They Owe. Whether You are Sharing a Ski
+              | Vacation, Splitting Rent with Roomates, or Paying Someone Back
+              | for Lunch, Fair Money Makes Life Easier.
