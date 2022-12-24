@@ -5,7 +5,7 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(groupController.getAllGroups)
+  .get(groupController.getAllGroups) //of specific user
   .post(groupController.createGroup);
 router
   .route("/:id")

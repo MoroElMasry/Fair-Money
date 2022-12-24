@@ -2,7 +2,11 @@
 
 const forms = document.querySelector(".needs-validation");
 const membersInput = document.querySelector("#grpMembers");
-membersInput.addEventListener("input", () => {
+membersInput.addEventListener("input", async () => {
+  // const inputValue = <get the input value from the user>
+  const res = await axios.get("http://127.0.0.1:8000/api/v1/users/search", {
+    params: { input: inputValue },
+  });
   console.log("object");
 });
 

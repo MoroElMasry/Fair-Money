@@ -19,7 +19,6 @@ if (process.env.NODE_ENV === "development") {
 } else if (process.env.NODE_ENV === "production") {
   console.log("------production env-----");
 }
-
 app.use(cookieParser());
 app.use(express.json());
 /* ----------------------------- static webpages ---------------------------- */
