@@ -4,7 +4,7 @@ block reference
 
 block content
   include _signedInNavBar
-  +specifyActionButton('newGroup')
+  +specifyActionButton('newGroup',user)
   .bg-image(style="\
   background-image: url('./images/group-list-background.svg');\
   height: 89vh;\
@@ -13,83 +13,84 @@ block content
   ")
     section.container.h-100.bg-light.overflow-auto.col-md-12.col-lg-7.col-xl-5.scroller.pt-5
       .row
-        .cell
-          .group--card
-            .row
-              a.card--header--dark(href='./specificGroupPage')
-                .index--number 1.
-                .group--name group name
-              .card--body
-                .group--description
-                  .members--description
-                    img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
-                    .members--Number 3
-                    |                       &nbsp;members
-                  .modified--description
-                    img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
-                    .d-flex.flex-wrap
-                      .text-nowrap last modified :&nbsp;
-                      .last--modified 12/12/2021
-                .description
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  | Perspiciatis, eum eveniet odit optiod
-        .cell
-          .group--card
-            .row
-              a.card--header--gray(href='./specificGroupPage')
-                .index--number 2.
-                .group--name group name
-              .card--body
-                .group--description
-                  .members--description
-                    img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
-                    .members--Number 3
-                    |                       &nbsp;members
-                  .modified--description
-                    img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
-                    .d-flex.flex-wrap
-                      .text-nowrap last modified :&nbsp;
-                      .last--modified 12/12/2021
-                .description
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  | Perspiciatis, eum eveniet odit optiod
-        .cell
-          .group--card
-            .row
-              a.card--header--dark(href='./specificGroupPage')
-                .index--number 3.
-                .group--name group name
-              .card--body
-                .group--description
-                  .members--description
-                    img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
-                    .members--Number 3
-                    |                       &nbsp;members
-                  .modified--description
-                    img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
-                    .d-flex.flex-wrap
-                      .text-nowrap last modified :&nbsp;
-                      .last--modified 12/12/2021
-                .description
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  | Perspiciatis, eum eveniet odit optiod
-        .cell
-          .group--card
-            .row
-              a.card--header--gray(href='./specificGroupPage')
-                .index--number 4.
-                .group--name group name
-              .card--body
-                .group--description
-                  .members--description
-                    img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
-                    .members--Number 3
-                    |                       &nbsp;members
-                  .modified--description
-                    img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
-                    .d-flex.flex-wrap
-                      .text-nowrap last modified :&nbsp;
-                      .last--modified 12/12/2021
-                .description
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  | Perspiciatis, eum eveniet odit optiod
+        each group, i in groups
+          -updatedAt =  new Date(group.updatedAt)
+          -updatedAt = updatedAt.toLocaleDateString('pt-PT')
+          .cell
+            .group--card
+              .row
+                a.card--header--dark(href=group._id)
+                  .index--number=i+1+"."
+                  .group--name=group.name
+                .card--body
+                  .group--description
+                    .members--description
+                      img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
+                      .members--Number=group.membersCount
+                      |                       &nbsp;members
+                    .modified--description
+                      img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
+                      .d-flex.flex-wrap
+                        .text-nowrap last modified :&nbsp;
+                        .last--modified=updatedAt
+                  .description=group.description
+        //- .cell
+        //-   .group--card
+        //-     .row
+        //-       a.card--header--gray(href='./specificGroupPage')
+        //-         .index--number 2.
+        //-         .group--name group name
+        //-       .card--body
+        //-         .group--description
+        //-           .members--description
+        //-             img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
+        //-             .members--Number 3
+        //-             |                       &nbsp;members
+        //-           .modified--description
+        //-             img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
+        //-             .d-flex.flex-wrap
+        //-               .text-nowrap last modified :&nbsp;
+        //-               .last--modified 12/12/2021
+        //-         .description
+        //-           | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        //-           | Perspiciatis, eum eveniet odit optiod
+        //- .cell
+        //-   .group--card
+        //-     .row
+        //-       a.card--header--dark(href='./specificGroupPage')
+        //-         .index--number 3.
+        //-         .group--name group name
+        //-       .card--body
+        //-         .group--description
+        //-           .members--description
+        //-             img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
+        //-             .members--Number 3
+        //-             |                       &nbsp;members
+        //-           .modified--description
+        //-             img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
+        //-             .d-flex.flex-wrap
+        //-               .text-nowrap last modified :&nbsp;
+        //-               .last--modified 12/12/2021
+        //-         .description
+        //-           | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        //-           | Perspiciatis, eum eveniet odit optiod
+        //- .cell
+        //-   .group--card
+        //-     .row
+        //-       a.card--header--gray(href='./specificGroupPage')
+        //-         .index--number 4.
+        //-         .group--name group name
+        //-       .card--body
+        //-         .group--description
+        //-           .members--description
+        //-             img.align-self-baseline.me-2(src='./images/people.svg' alt='gruop members' width='24')
+        //-             .members--Number 3
+        //-             |                       &nbsp;members
+        //-           .modified--description
+        //-             img.me-2.align-self-center(src='./images/clock.svg' alt='gruop memebers' width='17' height='17')
+        //-             .d-flex.flex-wrap
+        //-               .text-nowrap last modified :&nbsp;
+        //-               .last--modified 12/12/2021
+        //-         .description
+        //-           | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        //-           | Perspiciatis, eum eveniet odit optiod

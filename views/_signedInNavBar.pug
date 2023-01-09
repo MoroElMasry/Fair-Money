@@ -1,11 +1,12 @@
-mixin specifyActionButton(actionButton)
+mixin specifyActionButton(actionButton,user)
   nav.navbar.navbar-light.bg-secondary.shadow
     .container
       a.navbar-brand(href='./')
         img(src='./images/icons8-tax-96.png' alt='Fair Money logo' width='80')
       .ms-n3.me-auto.pt-3.h3.lh-1
         .fw-bold.d-lg-inline.d-block Welcome back!,
-        |           user name
+        | 
+        span= user.name
       .d-flex.flex-md-row.flex-column.align-self-end.mb-md-3.mb-0
         if actionButton == 'groupList'
           a.btn.btn-primary.rounded-4.py-2.px-3.fw-semibold.mb-md-0.mb-2(href='./groupListPage') My Groups

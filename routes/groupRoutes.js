@@ -1,15 +1,16 @@
 const express = require("express");
 const groupController = require("../controllers/groupController");
+const authController = require("../controllers/authController");
 
 const router = express.Router();
 
 router
   .route("/")
-  .get(groupController.getAllGroups) //of specific user
-  .post(groupController.createGroup);
+  // .get(authController.protect, groupController.getAllGroups) //of specific user
+  .post(authController.protect, groupController.createGroup);
 router
   .route("/:id")
-  .get(groupController.getGroup)
+  .get(authController.protect, groupController.getGroup)
   .patch(groupController.updateGroup)
   .delete(groupController.deleteGroup);
 

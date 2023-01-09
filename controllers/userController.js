@@ -5,9 +5,10 @@ exports.search = catchAsync(async (req, res) => {
   const queryObj = { ...req.query };
   const users = await User.find({
     $text: { $search: queryObj.input },
-  }).select("-__v -_id");
+  }).select("-__v");
   res.status(200).json({
     status: "success",
+    userEmail: req.user.email,
     data: {
       users: users,
     },

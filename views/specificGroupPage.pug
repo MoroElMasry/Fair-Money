@@ -8,7 +8,7 @@ block reference
   //-   });
 block content
   include _signedInNavBar
-  +specifyActionButton('newRecord')
+  +specifyActionButton('newRecord',user)
   #addRecord.modal.fade.modal-lg(tabindex='-1 ' data-bs-backdrop='static' data-bs-keyboard='false' aria-labelledby='staticBackdropLabel' aria-hidden='true')
     .modal-dialog.modal-dialog-centered
       .modal-content
@@ -50,10 +50,8 @@ block content
     section.container-xl.h-100.bg-light.overflow-auto.col-xl-7.scroller.pt-5
       .row
         .col-lg-5.col-md-6.col-9.mb-3
-          .display-5 group name
-          .lead
-            | Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            | Voluptatem voluptas omnis distinctio cum, waq
+          .display-5=group.name
+          .lead=group.description
         .ms-auto.col-3
           .d-md-block.d-none.position-absolute.bg-secondary.ms-2.py-2.px-3.rounded-pill.text-center.fw-semibold
             | &emsp;&emsp;&emsp;Back To 

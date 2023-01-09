@@ -62,30 +62,13 @@ block content
                         path(d='M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8\
                         12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8\
                         9c-5 0-6 3-6 4Z')
-                    input#grpMembers.form-control.shadow.w-75(type='text' placeholder='Group Members')
+                    input#grpMembers.form-control.shadow.w-75(type='text' placeholder='Group Members' list='users')
+                    datalist#users
                   .ms-auto
-                    button#addMemBtn.btn.btn-primary.shadow.ms-4.btn-lg
+                    button#addMemBtn.btn.btn-primary.shadow.ms-4.btn-lg(type='button')
                       | Add
-                .overflow-auto.shadow.bg-light.mt-3.rounded-4.scroller.border.border-secondary.border-1(style='height: 110px')
+                .overflow-auto.shadow.bg-light.mt-3.rounded-4.scroller.border.border-secondary.border-1(style='height: 300px')
                   ul.list-group
-                    li.list-group-item
-                      .d-flex
-                        img.ms-1(src='./images/profiles/male profile4.svg' alt='Male User Profile Pic' width='30')
-                        h4.ms-3 User name 1
-                        button.btn.btn-seondary.btn-outline-dark.shadow.ms-auto
-                          | Remove
-                    li.list-group-item
-                      .d-flex
-                        img.ms-1(src='./images/profiles/female profile2.svg' alt='Female User Profile Pic' width='30')
-                        h4.ms-3 User name 2
-                        button.btn.btn-seondary.btn-outline-dark.shadow.ms-auto
-                          | Remove
-                    li.list-group-item
-                      .d-flex
-                        img.ms-1(src='./images/profiles/female profile3.svg' alt='Female User Profile Pic' width='30')
-                        h4.ms-3 User name 3
-                        button.btn.btn-seondary.btn-outline-dark.shadow.ms-auto
-                          | Remove
               .row.justify-content-center
                 button#createNewMemBtn.btn.btn-primary.shadow.btn-lg.mt-3.me-1.w-auto(type='submit')
                   | Create New Group
