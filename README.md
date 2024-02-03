@@ -41,6 +41,8 @@ Fair Money is a REST API web application that simplifies the process of tracking
 
 ## Getting Started
 
+**RUN IT LOCALLY:**
+
 To get started with Fair Money on your local machine, follow these steps:
 
 1. Clone the repository:
@@ -61,13 +63,35 @@ To get started with Fair Money on your local machine, follow these steps:
    npm install
    ```
 
-4. Set up your MongoDB connection
-   1. Locate the `config.env` file in the root directory of your project.
-   2. Open the `config.env` file and find the MongoDB URI configuration variable. It should look something like this: `DATABASE=your-mongodb-uri`
-   3. Replace `your-mongodb-uri` with the actual MongoDB connection URI provided by your MongoDB hosting service or the local MongoDB URL you are using.
-   4. Save the `config.env` file.
+4. Set up your MongoDB connection (config.env file assumes that MongoDB works on port 27017 with no authentication)
+
 5. Start the server
 
    ```bash
-   npm install
+   npm run start:dev
    ```
+Note: You will need to update the database link inside the config.env file according to your MongoDB setup.
+
+**DOCKER OPTION:**
+
+To run Fair Money using Docker, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/MoroElMasry/Fair-Money
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd fair-money
+   ```
+
+3. Run the following command:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+Note: Docker will use ports 8000 and 27017 by default. You can customize these ports if needed.
